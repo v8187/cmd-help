@@ -1,0 +1,53 @@
+$headerHeight: 40px;
+$sidebarWidth:250px;
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: rgb(214, 207, 207);
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    margin: 0;
+
+    > {
+        h1 {
+            font-size: 18px;
+            line-height: $headerHeight;
+            margin: 0;
+            padding: 0 20px;
+        }
+    }
+}
+
+a {
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(105, 42, 81);
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(61, 11, 42);
+        text-decoration: none;
+    }
+}
+
+.side-bar,
+.content-pane {
+    height: calc(100% - #{$headerHeight});
+    overflow: auto;
+}
+
+.side-bar {
+    width: $sidebarWidth;
+    float: left;
+}
+
+.content-pane {
+    margin-left: $sidebarWidth;
+}
+
+@import "./side-bar.scss";
