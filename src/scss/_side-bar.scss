@@ -1,0 +1,29 @@
+.side-bar {
+    ul {
+        list-style: none;
+        padding: 0 15px;
+
+        a {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 35px;
+        }
+
+        ul {
+            a {
+                font-size: 13px;
+                font-weight: normal;
+                line-height: 25px;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        color: #666;
+
+        &:hover {
+            color: #333;
+        }
+    }
+}

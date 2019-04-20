@@ -1,0 +1,11 @@
+$intendation :25px;
+
+.introduction {
+    h3 {
+        margin-left: $intendation;
+    }
+
+    ul {
+        margin-left: calc(#{$intendation} * 2);
+    }
+}

@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     { id: 'intro', label: 'Introduction' },
     { id: 'howTo', label: 'How To?' },
     {

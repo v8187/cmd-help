@@ -1,0 +1,129 @@
+html,
+body {
+    height: 100%;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+section,
+aside,
+div,
+form {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    font-size: 22px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 19px;
+    line-height: 35px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+h4 {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+p,
+li {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+a {
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(105, 42, 81);
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(61, 11, 42);
+        text-decoration: none;
+    }
+}
+
+.side-bar,
+.content-pane {
+    height: calc(100% - #{$headerHeight});
+    overflow: auto;
+}
+
+.side-bar {
+    width: $sidebarWidth;
+    float: left;
+}
+
+.content-pane {
+    margin-left: $sidebarWidth;
+    padding: 0 15px;
+}
+
+input.hidden {
+    display: none;
+}
+
+
+pre {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    text-align: left;
+}
+
+.v-sorting-handle {
+    display: inline-block;
+}
+
+
+@media (max-width: 579px) {
+    .v-btn-icon-text {
+        .fa {
+            margin-right: 0;
+        }
+
+        span.text {
+            display: none;
+        }
+    }
+}
+
+.message-error {
+    margin: 5px 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 15px;
+    color: red;
+    text-align: justify;
+}
+
+//  Fix for Sortable list z-index issue in Modal
+.v-sortable-list {
+    z-index: 1051 !important;
+}
