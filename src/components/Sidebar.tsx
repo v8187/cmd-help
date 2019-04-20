@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react';
-
+import {HashRouter as Router, Link } from 'react-router-dom';
 import menuItems from '../configs/menuItems';
 
 export class Sidebar extends Component {
@@ -13,7 +13,7 @@ export class Sidebar extends Component {
         return (<ul>
             {items.map((item, i) => {
                 return (<li key={i}>
-                    <a href="#" id={item.id}>{item.label}</a>
+                    <Link to={item.id} id={item.id}>{item.label}</Link>
                     {item.children && this.renderMenu(item.children)}
                 </li>);
             })}
@@ -23,7 +23,9 @@ export class Sidebar extends Component {
     render() {
         return (
             <aside className="side-bar">
-                {this.renderMenu()}
+                <Router>
+                    {this.renderMenu()}
+                </Router>
             </aside>
         );
     }
