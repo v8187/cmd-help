@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 
-import menuItems from '../configs/menuItems';
-
-export class Introduction extends Component {
+export default class Introduction extends Component {
 
     render() {
         return (

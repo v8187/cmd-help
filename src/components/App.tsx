@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { Component } from 'react';
-import { HashRouter as Router, Route, } from 'react-router-dom';
+import { Component, lazy, Suspense } from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import '../scss/index.scss';
-import { Sidebar } from './Sidebar';
-import { Introduction } from './Introduction';
-import { DataTypes } from './DataTypes';
+import Sidebar from './Sidebar';
+import Loading from './Loading';
+// const Introduction = lazy(() => import('./Introduction').then(({ Introduction }) => ({ default: Introduction })));
+const Introduction = lazy(() => import('./Introduction'));
+const DataTypes = lazy(() => import('./DataTypes'));
 
-export class App extends Component {
+export default class App extends Component {
 
     render() {
         return (
@@ -17,9 +19,13 @@ export class App extends Component {
                 <Sidebar />
                 <article className="content-pane">
                     <Router>
-                        <Route exact={true} path="/" component={Introduction} />
-                        <Route path="/intro" component={Introduction} />
-                        <Route path="/dataTypes" component={DataTypes} />
+                        <Suspense fallback={<Loading />}>
+                            <Switch>
+                                <Route exact={true} path="/" component={Introduction} />
+                                <Route path="/intro" component={Introduction} />
+                                <Route path="/dataTypes" component={DataTypes} />
+                            </Switch>
+                        </Suspense>
                     </Router>
                 </article>
             </div>
