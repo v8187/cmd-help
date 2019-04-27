@@ -7,7 +7,7 @@ type TRequired<T> = T extends object ? { [P in keyof T]-?: NonNullable<T[P]>; } 
 //     T extends object
 //     ? { [P in keyof T]-?: NonNullable<T[P]> extends NonNullable<U | Function | Class> ? NonNullable<T[P]> : DeepRequired<NonNullable<T[P]>, U>; }
 //     : T;
-declare interface IOnChange { onChange: (options: any) => any; }
+declare interface IOnMount { onMount?: () => void; }
 declare interface ISelected { selected?: boolean; }
 declare interface IMinMax { min?: number; max?: number; }
 declare interface IReduxAction { type: string; payload?; }

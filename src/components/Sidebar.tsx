@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import { HashRouter as Router, Link } from 'react-router-dom';
-import menuItems from '../configs/menuItems';
+import menuItems from '../configs/menu-items';
 
 export default class Sidebar extends Component {
 

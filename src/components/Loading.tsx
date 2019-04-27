@@ -5,7 +5,7 @@ export default class Loading extends Component {
 
     render() {
         return (
-            <article className="introloadingduction">
+            <article className="loading">
                 Loading....
             </article>
         );

@@ -32,22 +32,25 @@ body {
 
 h1 {
     font-size: 22px;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 h2 {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 35px;
+    margin-top: 15px;
 }
 
 h3 {
-    font-size: 16px;
-    line-height: 35px;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 10px;
 }
 
 h4 {
     font-size: 14px;
     line-height: 25px;
+    margin-top: 10px;
 }
 
 p,
@@ -61,12 +64,48 @@ li {
 a {
     font-size: 13px;
     line-height: 20px;
-    color: rgb(105, 42, 81);
-    text-decoration: none;
+    cursor: pointer;
 
-    &:hover {
-        color: rgb(61, 11, 42);
+    ul & {
+        color: #666;
         text-decoration: none;
+
+        &:hover {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+
+    ul.lines &,
+    & {
+        color: rgb(35, 93, 168);
+        text-decoration: underline;
+
+        &:hover {
+            color: rgb(12, 49, 97);
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 15px auto;
+
+    thead {
+        background: #eee;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+    }
+
+    td {
+        vertical-align: top;
     }
 }
 
@@ -98,15 +137,30 @@ pre {
     text-align: left;
 }
 
+code[class*="language-"],
+pre[class*="language-"] {
+    font-size: 13px;
+    line-height: 20px;
 
+    :not(pre)>& {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+    }
+}
+
+pre[class*="language-"] {
+    padding: 15px 20px;
+    max-height: 250px;
+}
 
 .content-pane {
-    h3 {
-        margin-left: $intendation;
-    }
+    // h3 {
+    //     margin-left: $intendation;
+    // }
 
     ul {
-        margin-left: calc(#{$intendation} * 2);
+        // margin-left: calc(#{$intendation} * 2);
+        margin-left: $intendation;
     }
 }
 

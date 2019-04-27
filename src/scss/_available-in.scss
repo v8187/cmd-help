@@ -1,0 +1,34 @@
+.available-in {
+    table {
+        width: auto;
+        margin: 10px 0 0;
+
+        th,
+        td {
+            border: 0 none;
+            padding: 2px 0;
+        }
+
+        th {
+            color: #444;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        td {
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            padding-right: 10px;
+        }
+
+        .no {
+            color: #840909;
+        }
+
+        .yes {
+            color: #2d8c2d;
+        }
+    }
+}
