@@ -109,6 +109,18 @@ table {
     }
 }
 
+.tag {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 5px;
+    background: #efefef;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
 .side-bar,
 .content-pane {
     height: calc(100% - #{$headerHeight});

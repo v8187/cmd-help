@@ -19,11 +19,25 @@ export default class DTCountry extends Component<IOnMount> {
             <h3>Web App:</h3>
             <pre>
                 <code className="language-javascript">
-                    country(); // Outputs: India
+                    {`/**
+ * Sample JSON:
+ */
+const conJson1 = [{
+    "name": "myCountry",
+    "type": "country"
+}];
+
+// Output for 1 record:
+[{ myCountry: 'India' }]
+`}
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>N/A</p>
+            <pre>
+                <code className="language-javascript">
+                    country(); // Outputs: India
+                </code>
+            </pre>
         </article>);
     }
 };

@@ -50,7 +50,7 @@ export default class DataType extends Component<IDataTypeP> {
         switch (pathname) {
             case 'aadhaar': return <DTAadhaar onMount={this.props.onMount} />;
             case 'alphanumeric': return <DTAlphanumeric onMount={this.props.onMount} />;
-            case 'array': return <DTArray />;
+            case 'array': return <DTArray onMount={this.props.onMount} />;
             case 'autoIncrement': return <DTAutoIncrement onMount={this.props.onMount} />;
             case 'boolean': return <DTBoolean onMount={this.props.onMount} />;
             case 'ccPin': return <DTCCPin onMount={this.props.onMount} />;
@@ -65,7 +65,7 @@ export default class DataType extends Component<IDataTypeP> {
             case 'duration': return <DTDuration onMount={this.props.onMount} />;
             case 'email': return <DTEmail onMount={this.props.onMount} />;
             case 'gender': return <DTGender onMount={this.props.onMount} />;
-            case 'jsonObject': return <DTJsonObject />;
+            case 'jsonObject': return <DTJsonObject onMount={this.props.onMount} />;
             case 'latLong': return <DTLatLong onMount={this.props.onMount} />;
             case 'pan': return <DTPAN onMount={this.props.onMount} />;
             case 'password': return <DTPassword onMount={this.props.onMount} />;

@@ -46,11 +46,11 @@ export default class App extends Component {
                                 <Route exact={true} path={['/', '/intro']} component={Introduction} />
                                 {<Route
                                     path={[
-                                        '/dataTypes', '/aadhaar', '/alphanumeric', '/autoIncrement',
+                                        '/dataTypes', '/aadhaar', '/alphanumeric','/array', '/autoIncrement',
                                         '/boolean', '/ccPin', '/city', '/color',
                                         '/company', '/country', '/creditCard', '/currency',
                                         '/cvv', '/dateTime', '/duration', '/email',
-                                        '/gender', '/latLong', '/pan', '/password',
+                                        '/gender', '/jsonObject','/latLong', '/pan', '/password',
                                         '/personName', '/phoneNo', '/pincode', '/randomNumber',
                                         '/randomWords', '/state', '/streetAddress', '/uid',
                                         '/username'

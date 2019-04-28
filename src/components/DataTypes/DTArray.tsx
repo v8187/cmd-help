@@ -11,7 +11,9 @@ export default class DTArray extends Component<IOnMount> {
     render() {
         return (<article className="array">
             <h1>Array</h1>
-            <p>This Data Type can be used to generate list/array of nested objects. As of now, only fix number of records can be generated as nested properties</p>
+            <p>This Data Type can be used to generate list/array of nested objects.<br />
+                As of now, only fix number of records can be generated as nested properties.<br />
+                <span className="tag">I__D</span> must be defined if you use <span className="tag">Upload JSON</span> functionality</p>
             <Availability inApp={true} inLib={false} />
             <h2>Options</h2>
             <p>It provides following options to configure:</p>
@@ -35,12 +37,47 @@ export default class DTArray extends Component<IOnMount> {
                     </tr>
                 </tbody>
             </table>
-            {/* <h2>Examples</h2>
+            <h2>Examples</h2>
+            <h3>Web App:</h3>
             <pre>
                 <code className="language-javascript">
-                    uid(); // Outputs: 3c3eb18b-d7f2-48a5-b91b-65ded9e4eb24
+                    {`/** 
+ * Array as parent with 2 children
+ */
+const arrayJson = [{
+    "I__D": "marks",
+    "name": "marks",
+    "type": "array",
+    "options": { "count": 1 }
+}, {
+    "name": "sem1",
+    "type": "randomNumber",
+    "options": {
+        "min": 200, "max": 300
+    },
+    "parentRef": "marks"
+}, {
+    "name": "sem2",
+    "type": "randomNumber",
+    "options": {
+        "min": 400, "max": 500
+    },
+    "parentRef": "marks"
+}];
+
+// Output for 1 record:
+[{
+    "marks": [
+        {
+            "sem1": 267,
+            "sem2": 406
+        }
+    ]
+}]`}
                 </code>
-            </pre> */}
+            </pre>
+            <h3>Utility method:</h3>
+            <p>N/A</p>
         </article>);
     }
 };
