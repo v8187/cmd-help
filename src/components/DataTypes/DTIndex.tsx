@@ -2,10 +2,10 @@ import * as React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import dataTypes from '../../configs/data-types';
+import { groupedDataTypes } from '../../configs/data-types';
 
 const renderDataTypes = () => {
-    return dataTypes.map((group, i) => {
+    return groupedDataTypes.map((group, i) => {
         return [
             <h3 key={`groupName${i + 1}`}>{group.label}:</h3>,
             <ul key={`groupList${i + 1}`}>{

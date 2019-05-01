@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Availability from '../Availability';
+import LinkRsMock from '../LinkRsMock';
+import LinkRsUtils from '../LinkRsUtils';
 
 export default class DTBoolean extends Component<IOnMount> {
 
@@ -27,7 +29,13 @@ export default class DTBoolean extends Component<IOnMount> {
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>N/A</p>
+            <p>There is no method available in <LinkRsMock /> for Boolean.</p>
+            <p> However, you can use <LinkRsUtils />'s randomItem method for the same shown in below example:</p>
+            <pre>
+                <code className="language-javascript">
+                    {`randomItem([true, false]); // Outputs: true`}
+                </code>
+            </pre>
         </article>);
     }
 };

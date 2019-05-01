@@ -4,10 +4,14 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Prism from 'prismjs';
 
 import '../scss/index.scss';
+import { unGroupedDataTypes } from '../configs/data-types';
 import Sidebar from './Sidebar';
 import Loading from './Loading';
 import Page404 from './Page404';
 import Introduction from './Introduction';
+
+const dataTypesRoutes = ['/dataTypes'].concat(...unGroupedDataTypes.map(route => `/${route.id}`));
+
 // const DTIntroduction = lazy(() => import('./Introduction').then(({ Introduction }) => ({ default: Introduction })));
 // const Introduction = lazy(() => import('./Introduction'));
 const DataType = lazy(() => import('./DataTypes'));
@@ -30,6 +34,11 @@ export default class App extends Component {
 
     onRouteChange() {
         Prism.highlightAll();
+        const elcontent = document.querySelector('.content-pane > article'),
+            elCode = document.querySelector('code.language-javascript');
+
+        elCode && elCode.scrollIntoView();
+        elcontent && elcontent.scrollIntoView();
     }
 
     render() {
@@ -45,16 +54,7 @@ export default class App extends Component {
                                 {/* <Route exact={true} path='/' render={() => <Introduction onMount={this.onRouteChange} />} /> */}
                                 <Route exact={true} path={['/', '/intro']} component={Introduction} />
                                 {<Route
-                                    path={[
-                                        '/dataTypes', '/aadhaar', '/alphanumeric','/array', '/autoIncrement',
-                                        '/boolean', '/ccPin', '/city', '/color',
-                                        '/company', '/country', '/creditCard', '/currency',
-                                        '/cvv', '/dateTime', '/duration', '/email',
-                                        '/gender', '/jsonObject','/latLong', '/pan', '/password',
-                                        '/personName', '/phoneNo', '/pincode', '/randomNumber',
-                                        '/randomWords', '/state', '/streetAddress', '/uid',
-                                        '/username'
-                                    ]}
+                                    path={dataTypesRoutes}
                                     render={(props) => <DataType
                                         {...props}
                                         onMount={this.onRouteChange} />}

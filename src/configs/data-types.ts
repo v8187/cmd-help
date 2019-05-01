@@ -1,7 +1,7 @@
 /**
  * Configurable Options
  */
-export default [{
+export const groupedDataTypes = [{
     label: 'Nested',
     dataTypes: [
         { label: 'Array', id: 'array' },
@@ -65,3 +65,13 @@ export default [{
         // { label: 'Vegetable Name', id: 'vegetable' }
     ]
 }];
+
+export const unGroupedDataTypes: any = [];
+
+groupedDataTypes.map(dTypes => {
+    unGroupedDataTypes.push(...dTypes.dataTypes);
+});
+
+unGroupedDataTypes.sort((a, b) => {
+    return a.label > b.label ? 1 : a.label < b.label ? -1 : 0;
+});
