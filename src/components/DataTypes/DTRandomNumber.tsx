@@ -12,11 +12,9 @@ export default class DTRandomNumber extends Component<IOnMount> {
     render() {
         return (<article className="random-number">
             <h1>Random Number</h1>
-            <p>This Data Type can be used to generate random between the given minimum and maximum values.</p>
-            <p>
-                It accepts two parameters, min and max </p>
-            <p>
-                Defaults are min = 1 and max = 100.</p>
+            <p>This Data Type can be used to generate random number between the given minimum and maximum values.</p>
+            <p>It accepts two parameters, min and max.</p>
+            <p>Defaults are min = 1 and max = 100.</p>
             <Availability inApp={true} inLib={true} />
             <h2>Options</h2>
             <p>It provides following options to configure:</p>
