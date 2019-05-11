@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Availability from '../Availability';
-import LinkRsUtils from '../LinkRsUtils';
-import LinkRsMock from '../LinkRsMock';
+import NoUtilityRemarks from '../NoUtilityRemarks';
 
 export default class DTPincode extends Component<IOnMount> {
 
@@ -13,7 +12,7 @@ export default class DTPincode extends Component<IOnMount> {
     render() {
         return (<article className="pincode">
             <h1>Pincode</h1>
-            <p>This Data Type can be used to generate 6 digit Pin/Postal code Number.</p>
+            <p>This Data Type can be used to generate 6 digit Pin/Postal Code.</p>
             <Availability inApp={true} inLib={false} />
             <h2>Options</h2>
             <p>It does not have any options to customize the output.</p>
@@ -35,8 +34,7 @@ const pincodeJson1 = [{
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>There is no method available in <LinkRsMock /> for Pincode.</p>
-            <p> However, you can use <LinkRsUtils />'s xToNum method for the same shown in below example:</p>
+            <NoUtilityRemarks methodName="xToNum" dataType="Pincode" />
             <pre>
                 <code className="language-javascript">
                     {`/** 

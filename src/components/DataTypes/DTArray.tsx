@@ -11,9 +11,9 @@ export default class DTArray extends Component<IOnMount> {
     render() {
         return (<article className="array">
             <h1>Array</h1>
-            <p>This Data Type can be used to generate list/array of nested objects.<br />
-                As of now, only fix number of records can be generated as nested properties.<br />
-                <span className="tag">I__D</span> must be defined if you use <span className="tag">Upload JSON</span> functionality</p>
+            <p>This Data Type can be used to generate list/array of nested objects.</p>
+            <p>As of now, only fix number of records can be generated as nested properties.</p>
+            <p><span className="tag">I__D</span> must be defined if you use <span className="tag">Upload JSON</span> functionality</p>
             <Availability inApp={true} inLib={false} />
             <h2>Options</h2>
             <p>It provides following options to configure:</p>
@@ -21,19 +21,17 @@ export default class DTArray extends Component<IOnMount> {
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Required / Optional</th>
                         <th>Type</th>
-                        <th>Default value</th>
+                        <th>Defaults</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>count</td>
-                        <td>Optional</td>
                         <td>number | string</td>
                         <td>10</td>
-                        <td>Fixed number of records will be generated based on count value.</td>
+                        <td>Optional. Fixed number of records will be generated based on count value.</td>
                     </tr>
                 </tbody>
             </table>

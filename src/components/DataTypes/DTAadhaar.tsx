@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Availability from '../Availability';
-import LinkRsUtils from '../LinkRsUtils';
-import LinkRsMock from '../LinkRsMock';
+import NoUtilityRemarks from '../NoUtilityRemarks';
 
 export default class DTAadhaar extends Component<IOnMount> {
 
@@ -35,8 +34,7 @@ const aadhaarJson1 = [{
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>There is no method available in <LinkRsMock /> for Aadhaar.</p>
-            <p> However, you can use <LinkRsUtils />'s xToNum method for the same shown in below example:</p>
+            <NoUtilityRemarks methodName="xToNum" dataType="Aadhaar" />
             <pre>
                 <code className="language-javascript">
                     {`/** 

@@ -46,10 +46,10 @@ export default class App extends Component {
             <div className='app'>
                 <h1>Create Mock Data Guide</h1>
                 {/* <h1>Guide for Create Mock Data will be available soon.</h1> */}
-                <Sidebar />
-                <article className='content-pane'>
-                    <Router>
-                        <Suspense fallback={<Loading />}>
+                <Router>
+                    <Suspense fallback={<Loading />}>
+                        <Route component={Sidebar} />
+                        <article className='content-pane'>
                             <Switch>
                                 {/* <Route exact={true} path='/' render={() => <Introduction onMount={this.onRouteChange} />} /> */}
                                 <Route exact={true} path={['/', '/intro']} component={Introduction} />
@@ -65,9 +65,9 @@ export default class App extends Component {
                                 {/* <Route path='/array' component={() => <DTArray onMount={this.onRouteChange} />} /> */}
                                 <Route component={Page404} />
                             </Switch>
-                        </Suspense>
-                    </Router>
-                </article>
+                        </article>
+                    </Suspense>
+                </Router>
             </div>
         );
     }

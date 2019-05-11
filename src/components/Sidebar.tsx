@@ -3,13 +3,30 @@ import { Component } from 'react';
 import { HashRouter as Router, Link } from 'react-router-dom';
 import menuItems from '../configs/menu-items';
 
-export default class Sidebar extends Component {
+export interface ISidebarP {
+    location: Location;
+};
+
+export default class Sidebar extends Component<ISidebarP> {
+
+    constructor(props: ISidebarP) {
+
+        super(props);
+
+        this.renderMenu = this.renderMenu.bind(this);
+    }
 
     private renderMenu(items: any[] = menuItems) {
+        const { pathname } = this.props.location;
         return (<ul>
             {items.map((item, i) => {
                 return (<li key={i}>
-                    <Link to={item.id} id={item.id}>{item.label}</Link>
+                    <Link
+                        to={item.id}
+                        className={pathname.indexOf(item.id) !== -1 ||
+                            (pathname === '/' && item.id === 'intro') ? 'active' : undefined}>
+                        {item.label}
+                    </Link>
                     {item.children && this.renderMenu(item.children)}
                 </li>);
             })}
@@ -19,9 +36,7 @@ export default class Sidebar extends Component {
     render() {
         return (
             <aside className="side-bar">
-                <Router>
-                    {this.renderMenu()}
-                </Router>
+                {this.renderMenu()}
             </aside>
         );
     }

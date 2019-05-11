@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Availability from '../Availability';
-import LinkRsUtils from '../LinkRsUtils';
-import LinkRsMock from '../LinkRsMock';
+import NoUtilityRemarks from '../NoUtilityRemarks';
 
 export default class DTCCPin extends Component<IOnMount> {
 
@@ -12,8 +11,8 @@ export default class DTCCPin extends Component<IOnMount> {
 
     render() {
         return (<article className="cc-pin">
-            <h1>Credit Card Pin Code</h1>
-            <p>This Data Type can be used to generate 4 digit Credit card PIN code.</p>
+            <h1>Credit Card PIN</h1>
+            <p>This Data Type can be used to generate 4 digit Credit Card PIN.</p>
             <Availability inApp={true} inLib={false} />
             <h2>Options</h2>
             <p>It does not have any options to customize the output.</p>
@@ -35,8 +34,7 @@ const ccPinJson1 = [{
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>There is no method available in <LinkRsMock /> for Credit Card PIN Code.</p>
-            <p> However, you can use <LinkRsUtils />'s xToNum method for the same shown in below example:</p>
+            <NoUtilityRemarks methodName="xToNum" dataType="Credit Card PIN" />
             <pre>
                 <code className="language-javascript">
                     {`/** 

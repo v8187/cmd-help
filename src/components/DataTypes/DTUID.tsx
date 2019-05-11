@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Availability from '../Availability';
-import LinkRsUtils from '../LinkRsUtils';
-import LinkRsMock from '../LinkRsMock';
+import NoUtilityRemarks from '../NoUtilityRemarks';
 
 export default class DTUID extends Component<IOnMount> {
 
@@ -35,8 +34,7 @@ const uidJson1 = [{
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>There is no method available in <LinkRsMock /> for UID.</p>
-            <p> However, you can use <LinkRsUtils />'s setUID method for the same shown in below example:</p>
+            <NoUtilityRemarks methodName="setUID" dataType="UID" />
             <pre>
                 <code className="language-javascript">
                     {`setUID(); // Outputs: '3c3eb18b-d7f2-48a5-b91b-65ded9e4eb24'`}

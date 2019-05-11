@@ -11,7 +11,11 @@ export default class DTCountry extends Component<IOnMount> {
     render() {
         return (<article className="country">
             <h1>Country</h1>
-            <p>This Data Type can be used to generate random Country name.</p>
+            <p>
+                This Data Type can be used to generate random Country name.</p>
+            <p>
+                As of now, data is available only for following countries: India, China, USA, Brazil, France.
+            </p>
             <Availability inApp={true} inLib={true} />
             <h2>Options</h2>
             <p>It does not have any options to customize the output.</p>

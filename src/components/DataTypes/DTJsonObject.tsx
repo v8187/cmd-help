@@ -11,8 +11,12 @@ export default class DTJsonObject extends Component<IOnMount> {
     render() {
         return (<article className="json-object">
             <h1>JsonObject</h1>
-            <p>This Data Type can be used to generate Object with nested objects.<br />
-                <span className="tag">I__D</span> must be defined if you use <span className="tag">Upload JSON</span> functionality</p>
+            <p>
+                This Data Type can be used to generate Object with nested objects.
+            </p>
+            <p>
+                <span className="tag">I__D</span> must be defined if you use <span className="tag">Upload JSON</span> functionality.
+            </p>
             <Availability inApp={true} inLib={false} />
             <h2>Options</h2>
             <p>It does not have any options to customize the output.</p>

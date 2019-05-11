@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Availability from '../Availability';
-import LinkRsUtils from '../LinkRsUtils';
-import LinkRsMock from '../LinkRsMock';
+import NoUtilityRemarks from '../NoUtilityRemarks';
 
 export default class DTRandomWords extends Component<IOnMount> {
 
@@ -13,8 +12,10 @@ export default class DTRandomWords extends Component<IOnMount> {
     render() {
         return (<article className="random-words">
             <h1>Random Words</h1>
-            <p>This Data Type can be used to generate random sentence as per given minimum and maximum length of words.<br />
-                It accepts two parameters, min and max <br />
+            <p>This Data Type can be used to generate random sentence as per given minimum and maximum length of words.</p>
+            <p>
+                It accepts two parameters, min and max </p>
+            <p>
                 Defaults are min = 3 and max = 20.</p>
             <Availability inApp={true} inLib={true} />
             <h2>Options</h2>
@@ -23,26 +24,23 @@ export default class DTRandomWords extends Component<IOnMount> {
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Required / Optional</th>
                         <th>Type</th>
-                        <th>Default value</th>
+                        <th>Defaults</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>min</td>
-                        <td>Optional</td>
                         <td>number</td>
                         <td>3</td>
-                        <td>min value must be lower than max value.</td>
+                        <td>Optional. min value must be lower than max value.</td>
                     </tr>
                     <tr>
                         <td>max</td>
-                        <td>Optional</td>
                         <td>number</td>
                         <td>20</td>
-                        <td>max value must be greater than min value.</td>
+                        <td>Optional. max value must be greater than min value.</td>
                     </tr>
                 </tbody>
             </table>
@@ -76,8 +74,6 @@ const ranNum2 = [{
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>There is no method available in <LinkRsMock /> for Aadhaar.</p>
-            <p> However, you can use <LinkRsUtils />'s randomWords method for the same shown in below example:</p>
             <pre>
                 <code className="language-javascript">
                     {`/** Default */

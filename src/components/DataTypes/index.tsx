@@ -44,7 +44,6 @@ export interface IDataTypeP {
 export default class DataType extends Component<IDataTypeP> {
 
     render() {
-        console.log('props', this.props);
         const pathname = this.props.location.pathname.replace(/\//, '');
 
         switch (pathname) {

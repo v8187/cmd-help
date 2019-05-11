@@ -1,12 +1,12 @@
 .side-bar {
     ul {
         list-style: none;
-        padding: 0 15px;
 
         a {
             font-size: 14px;
             font-weight: bold;
             line-height: 35px;
+            padding: 0 15px;
         }
 
         ul {
@@ -14,11 +14,27 @@
                 font-size: 13px;
                 font-weight: normal;
                 line-height: 25px;
+                padding: 0 30px;
             }
         }
     }
 
     a {
         display: block;
+        position: relative;
+        transition: all 300ms linear;
+
+        &.active {
+            background: #efefef;
+            color: #2f4c8a;
+            border-left: 7px solid #2f4c8a;
+
+            // &:after {
+            //     content: "\2617";
+            //     position: absolute;
+            //     right: 5px;
+            //     transform: rotateX(-90deg);
+            // }
+        }
     }
 }

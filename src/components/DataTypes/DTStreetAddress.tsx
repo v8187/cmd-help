@@ -19,11 +19,25 @@ export default class DTStreetAddress extends Component<IOnMount> {
             <h3>Web App:</h3>
             <pre>
                 <code className="language-javascript">
-                    address(); // Outputs: Kothi 589 / 7328, Suspendisse Street, Vitae Ave.
+                    {`/**
+ * Sample JSON:
+ */
+const adjson = [{
+    "name": "myAddress",
+    "type": "address"
+}];
+
+// Output for 1 record:
+[{ myAddress: 'Kothi 58, Suspendisse Street, Vitae Ave.' }]
+`}
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>N/A</p>
+            <pre>
+                <code className="language-javascript">
+                    {`address(); // Outputs: Kothi 58, Suspendisse Street, Vitae Ave.`}
+                </code>
+            </pre>
         </article>);
     }
 };

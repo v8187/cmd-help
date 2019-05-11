@@ -26,7 +26,7 @@ export const groupedDataTypes = [{
         { label: 'Country', id: 'country' },
         { label: 'Latitude/Logitude', id: 'latLong' },
         { label: 'Pincode', id: 'pincode' },
-        { label: 'State / Region', id: 'state' },
+        { label: 'State / Province', id: 'state' },
         { label: 'Street Address', id: 'streetAddress' }
     ]
 }, {

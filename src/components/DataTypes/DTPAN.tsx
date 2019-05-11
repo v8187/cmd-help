@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Availability from '../Availability';
-import LinkRsUtils from '../LinkRsUtils';
-import LinkRsMock from '../LinkRsMock';
+import NoUtilityRemarks from '../NoUtilityRemarks';
 
 export default class DTPAN extends Component<IOnMount> {
 
@@ -35,8 +34,7 @@ const panJson1 = [{
                 </code>
             </pre>
             <h3>Utility method:</h3>
-            <p>There is no method available in <LinkRsMock /> for PAN.</p>
-            <p> However, you can use <LinkRsUtils />'s alphanumeric method for the same shown in below example:</p>
+            <NoUtilityRemarks methodName="alphanumeric" dataType="PAN" />
             <pre>
                 <code className="language-javascript">
                     {`/** 

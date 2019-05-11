@@ -24,19 +24,17 @@ export default class DTAlphanumeric extends Component<IOnMount> {
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Required / Optional</th>
                         <th>Type</th>
-                        <th>Default value</th>
+                        <th>Defaults</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>format</td>
-                        <td>Optional</td>
                         <td>string</td>
                         <td>&lt;empty string&gt;</td>
-                        <td>a => lowercase letter <br />
+                        <td>Optional. a => lowercase letter <br />
                             A => uppercase letter <br />
                             X => digit <br /></td>
                     </tr>
@@ -64,7 +62,9 @@ const alphaJson1 = [{
 const alphaJson2 = [{
     "name": "vechicleNo",
     "type": "alphanumeric",
-    "options": { "format": "aaxxAAaA" }
+    "options": {
+        "format": "aaxxAAaA"
+    }
 }];
 
 // Output for 1 record:
@@ -76,7 +76,9 @@ const alphaJson2 = [{
 const alphaJson3 = [{
     "name": "vechicleNo",
     "type": "alphanumeric",
-    "options": { "format": "xxxxx" }
+    "options": {
+        "format": "xxxxx"
+    }
 }];
 
 // Output for 1 record:
