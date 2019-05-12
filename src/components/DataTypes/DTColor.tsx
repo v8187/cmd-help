@@ -11,11 +11,11 @@ export default class DTColor extends Component<IOnMount> {
     render() {
         return (<article className="color">
             <h1>Color Name</h1>
-            <p>This Data Type can be used to generate random Colo value in 
-                <span className="tag">English Color Name</span>, 
-                <span className="tag">Hexadecimal</span>, 
-                <span className="tag">RGB Numeric</span>, 
-                <span className="tag">RGB Percentage</span> formats.</p>
+            <p>This Data Type can be used to generate random Color value in&nbsp; 
+                 <span className="tag">English Color Name</span>&nbsp;,&nbsp;
+                 <span className="tag">Hexadecimal</span>&nbsp;,&nbsp; 
+                 <span className="tag">RGB Numeric</span>&nbsp;,&nbsp; 
+                <span className="tag">RGB Percentage</span>&nbsp; formats.</p>
             <Availability inApp={true} inLib={true} />
             <h2>Options</h2>
             <p>It provides following options to configure:</p>
@@ -50,7 +50,7 @@ export default class DTColor extends Component<IOnMount> {
                     {`/** 
  * Sample 1: Without options 
  */
-const alphaJson1 = [{
+const colorJson1 = [{
     "name": "myColor",
     "type": "color"
 }];
@@ -59,33 +59,32 @@ const alphaJson1 = [{
 [{ myColor: 'Red' }]
 
 /** 
- * Sample 2: With options containing Lower, Upper and digits
+ * Sample 2: Get Hexadecimal Color value
  */
-// Sample JSON:
-const alphaJson2 = [{
+const colorJson2 = [{
     "name": "myColor",
     "type": "color",
     "options": {
-        "format": "aaxxAAaA"
+        "format": 1
     }
 }];
 
 // Output for 1 record:
-[{ myColor: 'de89HUdE' }]
+[{ myColor: '#B0C4DE' }]
 
 /** 
- * Sample 3: With options containing digits only
+ * Sample 3: Get RGB Numeric Color value
  */
-const alphaJson3 = [{
+const colorJson3 = [{
     "name": "myColor",
     "type": "color",
     "options": {
-        "format": "xxxxx"
+        "format": 3
     }
 }];
 
 // Output for 1 record:
-[{ myColor: '56702' }]`}
+[{ myColor: 'rgb(255, 109.65, 73.95)' }]`}
                 </code>
             </pre>
             <h3>Utility method:</h3>
@@ -94,11 +93,11 @@ const alphaJson3 = [{
                     {`/** Default */
 color(); // Outputs: 'Red'
 
-/** Format with Lower, Upper and digits */
-color({ format: 'aaxxAAaA' }); // Outputs: de89HUdE
+/** Get Hexadecimal Color value */
+color({ format: 1 }); // Outputs: '#B0C4DE'
 
-/** Format with 5 digits */
-color({ format: 'xxxxx' }); // Outputs: 56702`}
+/** Get RGB Numeric Color value */
+color({ format: 3 }); // Outputs: 'rgb(255, 109.65, 73.95)'`}
                 </code>
             </pre>
         </article>);
