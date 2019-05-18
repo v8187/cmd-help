@@ -28,9 +28,9 @@ export default class DTGender extends Component<IOnMount> {
                     <tr>
                         <td>format</td>
                         <td>
-                            <span className="tag">'m/f'</span> | <span className="tag">'M/F'</span> | <span className="tag">'Male/Female'</span>
+                            <b>'m/f'</b> | <b>'M/F'</b> | <b>'Male/Female'</b>
                         </td>
-                        <td><span className="tag">'Male/Female'</span></td>
+                        <td><b>'Male/Female'</b></td>
                         <td>Optional. Can one of the string value from Type column.</td>
                     </tr>
                 </tbody>

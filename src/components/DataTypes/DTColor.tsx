@@ -12,10 +12,10 @@ export default class DTColor extends Component<IOnMount> {
         return (<article className="color">
             <h1>Color Name</h1>
             <p>This Data Type can be used to generate random Color value in&nbsp; 
-                 <span className="tag">English Color Name</span>&nbsp;,&nbsp;
-                 <span className="tag">Hexadecimal</span>&nbsp;,&nbsp; 
-                 <span className="tag">RGB Numeric</span>&nbsp;,&nbsp; 
-                <span className="tag">RGB Percentage</span>&nbsp; formats.</p>
+                 <b>English Color Name</b>&nbsp;,&nbsp;
+                 <b>Hexadecimal</b>&nbsp;,&nbsp; 
+                 <b>RGB Numeric</b>&nbsp;,&nbsp; 
+                <b>RGB Percentage</b>&nbsp; formats.</p>
             <Availability inApp={true} inLib={true} />
             <h2>Options</h2>
             <p>It provides following options to configure:</p>

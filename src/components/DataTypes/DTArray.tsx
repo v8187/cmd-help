@@ -13,7 +13,7 @@ export default class DTArray extends Component<IOnMount> {
             <h1>Array</h1>
             <p>This Data Type can be used to generate list/array of nested objects.</p>
             <p>As of now, only fix number of records can be generated as nested properties.</p>
-            <p><span className="tag">I__D</span> must be defined if you use <span className="tag">Upload JSON</span> functionality</p>
+            <p><b>I__D</b> must be defined if you use <b>Upload JSON</b> functionality</p>
             <Availability inApp={true} inLib={false} />
             <h2>Options</h2>
             <p>It provides following options to configure:</p>

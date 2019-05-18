@@ -15,7 +15,7 @@ export default class DTJsonObject extends Component<IOnMount> {
                 This Data Type can be used to generate Object with nested objects.
             </p>
             <p>
-                <span className="tag">I__D</span> must be defined if you use <span className="tag">Upload JSON</span> functionality.
+                <b>I__D</b> must be defined if you use <b>Upload JSON</b> functionality.
             </p>
             <Availability inApp={true} inLib={false} />
             <h2>Options</h2>
